@@ -167,7 +167,7 @@ SYSCTL_RCC_R&=~(1<<13);/*this shall be done by MCU driver*/
 
        }
 }
-
+#if AdcDeInitApi
 void Adc_DeInit(void)
 {
     if(Adc_module_state==Un_Init)
@@ -182,12 +182,18 @@ void Adc_DeInit(void)
         }
     else{
         uint8 index3;
+#if ADC_HW0_INt
+        ADCIntDisable(Adc_Config_Container.AdcConfigSet.AdcHwUnit[0].AdcHwUnitId, 1|2|3);
+#endif
+#if ADC_HW1_INt
+        ADCIntDisable(Adc_Config_Container.AdcConfigSet.AdcHwUnit[1].AdcHwUnitId, 1|2|3);
+#endif
             for(index3=0;index3<NUM_of_HW_Units;index3++)
             {   /*the following line disables all sequencers*/
                 (*((volatile unsigned long *)Adc_Config_Container.AdcConfigSet.AdcHwUnit[index3].AdcHwUnitId))=0;
-               SysCtlPeripheralDisable(CLK_enable_param[index3]);
-
+                  SysCtlPeripheralDisable(CLK_enable_param[index3]);
             }
+
             Adc_module_state=Un_Init;
             for(index3=0;index3<Num_of_all_groups;index3++)
             {
@@ -196,3 +202,4 @@ void Adc_DeInit(void)
           }
  }
 }
+#endif
