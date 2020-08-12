@@ -1,0 +1,28 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\ti\TivaWare_C_Series-2.1.4.178\examples\boards\ek-tm4c123gxl\car window\car_window.uvproj
+Project File Date:  05/28/2018
+
+<h2>Output:</h2>
+Build target 'freertos_demo'
+compiling mymain.c...
+car_window.h(9): warning:  #1-D: last line of file ends without a newline
+  void pwm1_init(void);
+mymain.c(27): warning:  #223-D: function "xTaskCreate" declared implicitly
+        xTaskCreate(power_window,"Task 1",240, NULL, 1, NULL );
+mymain.c(36): warning:  #223-D: function "vTaskStartScheduler" declared implicitly
+                vTaskStartScheduler();  
+mymain.c: 3 warnings, 0 errors
+linking...
+.\rvmdk\freertos_demo.axf: error: L6031U: Could not open scatter description file freertos_demo.sct: No such file or directory
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning, 0 error and 1 fatal error messages.
+".\rvmdk\freertos_demo.axf" - 1 Error(s), 3 Warning(s).
+Target not created
+</pre>
+</body>
+</html>
