@@ -1,0 +1,17 @@
+.\output\main.o: main.c
+.\output\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\output\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\output\main.o: ..\..\FreeRTOS-Source\include\FreeRTOS.h
+.\output\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\output\main.o: ..\..\FreeRTOS-Source\include\projdefs.h
+.\output\main.o: ..\Example015\FreeRTOSConfig.h
+.\output\main.o: ..\..\FreeRTOS-Source\include\portable.h
+.\output\main.o: ..\..\FreeRTOS-Source\portable\RVDS\ARM_CM3\portmacro.h
+.\output\main.o: ..\..\FreeRTOS-Source\include\mpu_wrappers.h
+.\output\main.o: ..\..\FreeRTOS-Source\include\task.h
+.\output\main.o: ..\..\FreeRTOS-Source\include\list.h
+.\output\main.o: ..\..\FreeRTOS-Source\include\semphr.h
+.\output\main.o: ..\..\FreeRTOS-Source\include\queue.h
+.\output\main.o: hw_types.h
+.\output\main.o: hw_memmap.h
+.\output\main.o: hw_sysctl.h
